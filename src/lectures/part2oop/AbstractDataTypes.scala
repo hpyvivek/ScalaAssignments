@@ -27,6 +27,7 @@ object AbstractDataTypes extends App{
   val dog = new Dog
   val croc = new Crocodile
   croc. eat(dog)
+  println(" end of line ")
 
 
 }
