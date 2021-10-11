@@ -22,4 +22,15 @@ object string extends  App{
      val newStr: String = "if I were PM"
      newStr.substring(0, 4)
   }
+
+  def test3(str: String, n: Int): String =
+  {
+    str.take(n) + str.drop(n+1)
+
+  }
+    println("Result: " + test3("Scala", 1))
+    println("Result: " + test3("Scala", 4))
+    println("Result: " + test3("Scala", 0))
+    println("Result: " + test3("Scala", 3))
+
 }
