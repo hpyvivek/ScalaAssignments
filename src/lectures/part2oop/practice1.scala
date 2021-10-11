@@ -49,4 +49,6 @@ object practice1 extends App {
   println(" Result := " + test2(200))
   println(" Result := " + test2(115))
 
+  println("EOL...........")
+
 }
