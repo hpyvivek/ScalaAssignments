@@ -1,6 +1,6 @@
 package lectures.part2oop
 
-import sun.font.TrueTypeFont
+
 
 object practice1 extends App {
 
