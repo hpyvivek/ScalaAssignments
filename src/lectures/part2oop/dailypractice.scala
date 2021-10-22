@@ -35,16 +35,20 @@ object string extends  App {
   println("Result: " + test3("Scala", 3))
   println("------------------------------------------------------------------")
 }
-object strings {
-    def main(args:Array[String]): Unit= {
-      val str = ("Rock the JVM")
-      println("Orignal String str:- " + str +  " yoo ")
-    }
-    println("----------------------------------------------------------------------")
-    println(" Understanding the way main f(x) is written  ")
+object strings extends App {
+    //def main(args: Array [String]): Unit = {
+      var str = "Rock the JVM"
+      println("Original String str:- " + str + " yoo ")
+      println("----------------------------------------------------------------------")
+      println(" Understanding the way main f(x) is written  ")
+      var index1 = str.charAt(0)
+      var index2 = str.charAt(5)
+      var index3 = str.charAt(9)
 
-  }
+      println(s"the char at 0 is ${index1}")
+      println(s"the char at 5 is ${index2}")
+      println(s"the char at 9 is ${index3}")
+      println(s"Length of the string: ${str.length}")
 
 
-
-
+}
