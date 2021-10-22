@@ -46,6 +46,5 @@ object selfsolvedpractice extends App {
   colors -= "Red"
   val colors_Nlist = colors.toList
   println(colors_Nlist)
-
-
 }
+
