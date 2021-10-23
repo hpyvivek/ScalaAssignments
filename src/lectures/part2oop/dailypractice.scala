@@ -52,3 +52,47 @@ object strings extends App {
 
 
 }
+//  Write a Scala program to compare two strings lexicographically
+
+object StringTest {
+  def test (str1: String, str2: String ): String = {
+    var result = str1.compareTo(str2)
+    if (result < 0) {
+      ("\"" + str1 + "\"" + "is less than " + "\"" + str2 + "\"")
+    } else if (result == 0) {
+      "\"" + str1 + "\"" + " is equal to " + "\"" + str2 + "\""
+    } else {
+      "\"" + str1 + "\"" + "is greater than" + "\"" + str2 + "\""
+    }
+
+    }
+def main(args : Array[String]): Unit = {
+  var str1 = "This is sentence 1 "
+  var str2 = "This is sentence 2 "
+  println("String 1 := " + str1 )
+  println("String 2 := " + str2 )
+
+  var result = test (str1, str2 )
+  println(result)
+  println("------------------------------------------------")
+  str1 = "This is sentence 1 "
+  str2 = "This is sentence 1 "
+  println("String 1 := " + str1 )
+  println("String 2 := " + str2 )
+
+  result = test (str1, str2 )
+  println(result)
+  println("------------------------------------------------")
+  str1 = "This is sentencey 1 "
+  str2 = "This is sentence 1 "
+  println("String 1 := " + str1 )
+  println("String 2 := " + str2 )
+
+  result = test (str1, str2 )
+  println(result)
+  println("------------------------------------------------")
+
+}
+  }
+
+
