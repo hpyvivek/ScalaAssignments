@@ -66,7 +66,8 @@ object StringTest {
     }
 
     }
-def main(args : Array[String]): Unit = {
+
+  def main(args : Array[String]): Unit = {
   var str1 = "This is sentence 1 "
   var str2 = "This is sentence 2 "
   println("String 1 := " + str1 )
@@ -91,8 +92,19 @@ def main(args : Array[String]): Unit = {
   result = test (str1, str2 )
   println(result)
   println("------------------------------------------------")
-
 }
   }
+object concatenateString {
+  def concate (str1: String, str2: String): Unit = {
+      val str3 = str1.concat(str2)
+  }
 
+  def main(args: Array[String]): Unit = {
+    val str1 = "scala rocks"
+    val str2 = "python rocks"
+    val str3 = concate(str1, str2)
+      println("Concatenated string is " + str3)
 
+  }
+
+  }
