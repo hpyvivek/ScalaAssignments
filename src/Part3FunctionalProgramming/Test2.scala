@@ -17,6 +17,12 @@ object Test2 extends App {
   println(adder3(4))
   println(SuperAdder(3)(4))
 
+  val test : Function2[ Int, Int, Int] = new Function2[ Int, Int, Int ] {
+    override def apply(x: Int, y: Int): Int = x + y
+  }
+  println ( test (2,3 ))
+
+  
     /*curried function ( curried function has the prop that
                              they can be called with multiple parameter list ||
                              It recieves some  kind of parameter and returns another parameter as F(x)
