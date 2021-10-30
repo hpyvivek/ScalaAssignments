@@ -27,7 +27,7 @@ object Test2 extends App {
                              they can be called with multiple parameter list ||
                              It recieves some  kind of parameter and returns another parameter as F(x)
                              which receives parameters */
-}
-trait Myfunc[A, B]{
-  def apply(element: A): A = ???
+//}
+//trait Myfunc[A, B]{
+  //def apply(element: A): A = ???
 }
