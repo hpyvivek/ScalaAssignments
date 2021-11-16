@@ -15,7 +15,7 @@ object Sequences extends App{
   println(aSequence.sorted)
 
   //Ranges
-  val aRange: Seq[Int] = 1 until 10
+  val aRange: Seq[Int] = 1 to 10
   aRange.foreach(println)
 
   (1 to 10 ).foreach(x=> println("Hello Scala"))
@@ -29,12 +29,20 @@ object Sequences extends App{
 
   val apples5 = List.fill(5)("apple")
   println(apples5)
-  println(aList.mkString("-"))
+  println(apples5.mkString("{", " - ", "}") )
 
   //Arrays
+  var sum = 0
   val numbers = Array(1,2,3,4)
-  val threeElements = Array.ofDim[String](3)
-  threeElements.foreach(println)
+  val threeElements = Array.ofDim[Int](2,2)
+  threeElements(0)(0)=1
+  threeElements(1)(1)=1
+  threeElements(0)(1)=5
+  threeElements(1)(0)=6
+  threeElements.foreach(x=> {x.foreach(y => sum = sum + y)
+  })
+  println(sum)
+
 
   //mutation
   numbers(2) = 0  // special Syntax sugar for numbers.update(2,0)
