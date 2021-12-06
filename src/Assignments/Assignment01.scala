@@ -20,6 +20,8 @@ object Assignment01 extends App{
   println("Result:- " + aString("World"))
   println("Result:- " + aString("us"))
 
+  println("______________________________________________________________________")
+
 
   /* Remove the character in a given position of a given string.
   The given position will be in the range 0...string length -1 inclusive.
@@ -34,6 +36,8 @@ object Assignment01 extends App{
   println("Result := "+ str2("Scala", 3 ))
   println("Result := "+ str2("Scala", 4 ))
 
+  println("______________________________________________________________________")
+
   /* Question - 3
    Create a new string with the last char added at the front and back of a given string of length 1 or more.
    */
@@ -43,9 +47,12 @@ object Assignment01 extends App{
     else (str.charAt((str.length) - 1) + str + str.charAt((str.length) - 1))
   }
   println(str3("Scala"))
+  println(str3("Practice"))
   println(str3("Sc"))
   println(str3("S"))
 
+
+  println("______________________________________________________________________")
   /* Question - 4: Create a new string where 'if' is added to the front of a given string.
   If the string already begins with 'if', return the string unchanged.
    */
@@ -56,6 +63,8 @@ object Assignment01 extends App{
   }
   println(str4(" I were PM "))
   println(str4("If I were PM "))
+
+  println("______________________________________________________________________")
 
   /* Question - 5:
      Check which number is nearest to the value 100 among two given integers.
@@ -73,6 +82,7 @@ object Assignment01 extends App{
   println(" the no. closer to 100 is :- " + checkNum( 40, 30 ))
   println(" the no. closer to 100 is :- " + checkNum(66, 66))
 
+  println("______________________________________________________________________")
   /* Question - 6:
      Check whether two given integers are in the range x <= 20 to y >= 50 or y <= 20 to x >= 50,
      return true if the given numbers are within the range, or if the numbers are out of range return false
@@ -87,18 +97,35 @@ object Assignment01 extends App{
   println(numRange(21,51))
   println(numRange(88,6))
 
+  println("______________________________________________________________________")
+
   /* Question - 7:
    Write a Scala program to check whether a specified character is happy or not.
    A character is happy when the same character appears to its left or right in a string.
    */
+  def checkChar(str: String, x:Char): Boolean = {
+    var len= str.length
+    var happyCheck = true
+    for( i<- 0 until  len-1){
+      if( str.charAt(i)== x){
+        if (i >0 && str.charAt(i - 1) == x )
+          happyCheck = true
+        else if ( i < len-1 && str.charAt(i + 1)== x)
+          happyCheck = true
+        else happyCheck = false
+      }
+    }
+    happyCheck
+  }
+  var strcheck1 = "soloman"
+  var x = 'o'
+  println("The given string is: " + strcheck1);
+  println("Is " + x + " happy in the said string: " + checkChar(strcheck1, x))
 
-
-
-
-
-
-
-
+  strcheck1 = "happy"
+  x = 'p'
+  println("The given string is: " + strcheck1);
+  println("Is " + x + " happy in the said string: " + checkChar(strcheck1, x))
 
 
 
